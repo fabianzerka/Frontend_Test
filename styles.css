@@ -1,0 +1,268 @@
+.header {
+    background-color: #E8EBF7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 8px 0 8px;
+}
+.pageName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.userActivity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.activity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search_img {
+    background-color: midnightblue;
+}
+.searchInput {
+    height: 32px;
+    border-color: #02044A;
+    width: 380px;
+    text-align: center;
+    border-radius: 4px;
+}
+.footer{
+    background-color: #173753;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    padding: 16px 0 16px 0;
+}
+.footer img {
+    opacity: 0.5; 
+}
+.shoppingLanguage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.shopping {
+    display: flex;
+    flex-direction: column;
+}
+.shopping select {
+    background-color: #173753; 
+    color: white; 
+}
+.sitemap{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+.policy{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+}
+.sitemapPolicy{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.supplies{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+.tattoSupplies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.ad1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.ad2{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.ad3{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.ads {
+    display: grid;
+    grid-template-columns: 681px auto;
+    grid-template-rows: 186px 186px;
+    grid-column-gap: 9px;
+    grid-row-gap: 9px;
+    margin: 20px auto;
+    width: fit-content;
+}
+button {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    height: 32px;
+    width: 120px;
+}
+span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-title {
+    margin: 0;
+}
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.carousel-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.carousel-dot.active {
+    background-color: black;
+}
+.carousel {
+    display: flex;
+    width: 100%; 
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+.carousel-item {
+    background-color: white;
+    padding: 8px;
+    margin-right: -120px;
+    flex: 0 0 10%; 
+    flex-direction: column;
+    text-align: center;
+}
+.carousel-container {
+    width: 66%; 
+    margin: 0 auto; 
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+.carouselArrows {
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 32px;
+}
+.newProducts {
+    margin-top: 16px;
+    padding: 16px;
+    text-align: center; 
+    background-color: #F5F4F5;
+}
+body {
+    margin: 0;
+}
+.policy {
+    margin: 0;
+}
+.price {
+    margin: 0;
+    color: cornflowerblue;
+}
+.description {
+    margin: 0;
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        justify-content: space-around;
+    }
+    .search {
+        display: none;
+    }
+    .nondisplay {
+        display: none;
+    }
+    .ads {
+        grid-template-columns: auto;
+        width: 100%;
+        grid-template-rows: repeat(3, 186px);
+    }
+    .ad1, .ad2, .ad3 {
+        width: 100%;
+        height: 186px;
+    }
+    .supplies {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .tattoSupplies {
+        width: 80%; 
+    }
+    .newProducts {
+        padding: 10px;
+    }
+    .carousel-container {
+        width: 90%;
+    }
+    .carousel-item {
+        flex: 0 0 auto; 
+        width: 100%;
+        margin-right: 0;
+    }
+    .carousel-dots {
+        margin-top: 5px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    .shoppingLanguage, .sitemapPolicy {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .shopping select, .sitemap, .policy {
+        gap: 10px;
+    }
+    .footer img {
+        width: auto;
+        height: 20px; 
+    }
+}
